@@ -1,0 +1,56 @@
+package prima;
+
+import java.util.Scanner;
+
+public class BilanganPrima {
+
+    public static void hitungPrima() {
+        Scanner abcd = new Scanner(System.in);
+        System.out.println("Sekarang Masukkan bilangan yang ingin di cek");
+        int pilih2 = abcd.nextInt();
+        if (pilih2 < 2) {
+            System.out.println("Bilangan " + pilih2 + " bukan bilangan prima");
+        } else {
+            boolean notPrime = false;
+            for (int j = 2; j < pilih2; j++) {
+                int prima = pilih2 % j;
+                if (prima == 0) {
+                    notPrime = true;
+                    break;
+                }
+            }
+            if (notPrime) {
+                System.out.println(pilih2 + " bukan bilangan prima");
+            } else {
+                System.out.println(pilih2 + " adalah bilangan prima");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner abc = new Scanner(System.in);
+        boolean a = true;
+        while (a) {
+            System.out.println("Silahkan pilih menu bilangan prima berikut");
+            System.out.println("1. Masuk Menu pengecekan bilangan prima");
+            System.out.println("2. Exit");
+            int pilih = abc.nextInt();
+
+            switch (pilih) {
+                case 1:
+                    hitungPrima();
+                    break;
+                case 2: {
+                    System.out.println("Terima kasih telah mengunjungi kami");
+                    a = false;
+                    break;
+                }
+                default:
+                    System.out.println("Pilihan anda tidak ada! Tolong pilih pilihan yang tersedia\n");
+                    break;
+            }
+            
+        }
+    }
+
+}
