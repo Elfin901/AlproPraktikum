@@ -1,0 +1,105 @@
+package Modul6_Array2d;
+
+import javax.swing.JOptionPane;
+
+public class NewClass {
+
+    static double rataArray() {
+        double temp = 0;
+        int data[][] = {{4, 6, 4, 2, 8, 4, 2, 10}, {4, 6, 4, 2, 8, 4, 2, 10}};
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[0].length - 1; j++) {
+                data[i][j] += data[i][j + 1];
+            }
+        }
+        temp = data[data.length - 1][data[data.length - 1].length - 1];
+        return temp;
+    }
+
+    public static void main(String[] args) {
+        int data[][] = {{4, 6, 4, 2, 8, 4, 2, 10}, {4, 6, 4, 2, 8, 4, 2, 10}};
+        for (int a = 0; a < data.length; a++) {
+            for (int b = 0; b < data[0].length; b++) {
+                System.out.print(data[a][b] + " ");
+            }
+            System.out.println("");
+        }
+
+        System.out.println("perulangan while");
+        //perulangan while
+        int c = 0, d = 0;
+        while (c < data.length) {
+            while (d < data[0].length) {
+                System.out.print(data[c][d] + " ");
+                d++;
+            }
+            System.out.println("");
+            d = 0;
+            c++;
+        }
+
+        System.out.println("perulangan do while");
+        //perulangan do while
+        int e = 0, f = 0;
+        do {
+            do {
+                System.out.print(data[e][f] + " ");
+                f++;
+            } while (f < data[0].length);
+            System.out.println("");
+            f = 0;
+            e++;
+        } while (e < data.length);
+
+        System.out.println("");
+        System.out.println("Nilai Rata rata Array");
+        //cari nilai rata rata array
+        System.out.println("Rata Rata semua array = " + rataArray());
+        try {
+
+            int g = Integer.parseInt(JOptionPane.showInputDialog(null,
+                    "Sekarang kita akan mencari angka di dalam array\n"
+                    + "Silahkan masukkan angka yang ingin anda cari"));
+            for (int i = 0; i < data.length; i++) {
+                for (int j = 0; j < data[0].length; j++) {
+                    if (g == data[i][j]) {
+                        System.out.println("Angka anda ada di baris " + i + " kolom " + j);
+                    } else {
+                        System.out.println("Angka anda tidak ada di data kami !");
+                    }
+                }
+            }
+            int z = Integer.parseInt(JOptionPane.showInputDialog(null,
+                    "Sekarang kita akan mengganti angka di dalam array yang sudah anda cari\n"
+                    + "Silahkan masukkan angka baru pengganti angka lama"));
+            for (int i = 0; i < data.length; i++) {
+                for (int j = 0; j < data[0].length; j++) {
+                    if (g == data[i][j]) {
+                        data[i][j] = z;
+                    }
+                }
+            }
+        } catch (Exception exu) {
+            String h = JOptionPane.showInputDialog(null,
+                    "Sekarang kita akan mencari angka di dalam array\n"
+                    + "Silahkan masukkan angka yang ingin anda cari");
+            JOptionPane.showMessageDialog(null,
+                    "Apa maksud Anda mengetik bukan angka !!!");
+        }
+
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[0].length; j++) {
+                System.out.print(data[i][j]+" ");
+            }
+            System.out.println("");
+        }
+        
+        System.out.println("");
+        //jumlah genap
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 1; j < data[0].length-2; j+=2) {
+                data[i][j] += data [i][j+2];
+            }
+        }
+    }
+}
