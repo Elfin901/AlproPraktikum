@@ -1,0 +1,41 @@
+package UTS;
+import java.util.Scanner;
+
+public class UTS124 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a = 0;
+        System.out.println("Silahkan masukkan inputan sembarang !!");
+        System.out.println("Kami akan memeriksa apakah inputan anda angka atau bukan.");
+        try {
+            int b = input.nextInt();
+            a = 1;
+            System.out.println(b);
+            switch (a) {
+                case 1:
+                    System.out.println("Inputan adalah angka");
+                    break;
+                default:
+                    break;
+            }
+        } catch (Exception e) {
+            String c = input.next();
+            a = 1;
+            switch (a) {
+                case 1:
+                    char notNumber[] = c.toCharArray();
+                    System.out.println("Inputan akan dibalik");
+                    for (int i = (notNumber.length - 1); i >= 0; i--) {
+                        System.out.print(notNumber[i]);
+                    }
+                    System.out.println("");
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    }
+
+}
