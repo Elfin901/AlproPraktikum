@@ -1,0 +1,28 @@
+package Modul1_Arrays;
+public class ArraySurveyTinggi {
+    public static void main(String[] args) {
+        double Indo[] = new double[10];
+        Indo [0] = 178.6;
+        Indo [1] = 180.7;
+        Indo [2] = 181.8;
+        Indo [3] = 183.9;
+        Indo [4] = 185.0;
+        Indo [5] = 187.2;
+        Indo [6] = 188.4;
+        Indo [7] = 190.1;
+        Indo [8] = 193.3;
+        Indo [9] = 197.5;
+        double awal = 0.0;
+        double ratarata;
+        
+        System.out.println("Daftar Tinggi Badan Orang Indo : ");        
+        for (int i = 0; i < Indo.length; i++){
+            System.out.println(Indo[i]);
+            awal += Indo [i];
+        }
+        ratarata = awal/Indo.length;
+        System.out.println("Total Tinggi Orang Indo Hasil Survey = " + awal);
+        System.out.println("Rata rata tinggi human Indo = " + ratarata);
+    }
+    
+}
