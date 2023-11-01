@@ -1,0 +1,17 @@
+package Modul7_ExceptionHandlingAndMethod.percobaan;
+
+public class Percobaan2 {
+
+    public static int sigma(int n) {
+        int x;
+        int aljabar = 0;
+        for (int i = 1; i <= n; i++) {
+            x = i + 2 * i;
+            aljabar +=x;
+        }
+        return aljabar;
+    }
+    public static void main(String[] args) {
+        System.out.println("Nilai dari Sigma (x+2x) adalah "+Percobaan2.sigma(10));
+    }
+}
