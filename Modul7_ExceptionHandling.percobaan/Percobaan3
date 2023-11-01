@@ -1,0 +1,24 @@
+package Modul7_ExceptionHandlingAndMethod.percobaan;
+
+import javax.swing.JOptionPane;
+
+public class Percobaan3 {
+    public static int luasPersegipanjang(int panjang, int lebar){
+        return panjang*lebar;
+    }
+    public static double luasSegitiga(int alas, int tinggi){
+        return alas*tinggi/2;
+    }
+    public static double luasLingkaran(int r){
+        double luas = Math.PI * r*r;
+        return luas;
+    }
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "Sekarang Kita akan membantu Budi Menghitung Luas Bangun Datar");
+        int pjg = Integer.parseInt(JOptionPane.showInputDialog("Pertama kita hitung luas persegi panjang terlebih dahulu\nMasukkan nilai panjang :"));
+        int lbr = Integer.parseInt(JOptionPane.showInputDialog("Pertama kita hitung luas persegi panjang terlebih dahulu\nMasukkan nilai lebar :"));
+        int alas = Integer.parseInt(JOptionPane.showInputDialog("Kedua kita hitung luas segitiga\nMasukkan nilai alas :"));
+        int tinggi = Integer.parseInt(JOptionPane.showInputDialog("Kedua kita hitung luas segitiga\nMasukkan nilai tinggi :"));
+        int jari2 = Integer.parseInt(JOptionPane.showInputDialog("Terakhir kita hitung luas lingkaran\nMasukkan nilai jari jari :"));
+    }
+}
