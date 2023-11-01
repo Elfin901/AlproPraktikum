@@ -1,1 +1,1 @@
-# AlproPraktikum
+# Algoritma dan pemrograman Praktikum
