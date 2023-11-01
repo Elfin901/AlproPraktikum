@@ -1,0 +1,39 @@
+package Modul7_ExceptionHandlingAndMethod.percobaan;
+
+public class metodx {
+    public double luasLingkaran (int diameter){
+        int jari2 = diameter/2;
+        double luas = Math.PI * Math.pow(jari2, 2);
+        return luas;
+    }
+    public void hitungLuasLingkaran(int jari2){
+        double luas = Math.PI * Math.pow(jari2, 2);
+        System.out.println(luas);
+    }
+    public double volumeTabung(int diameter, int tinggi){
+        int jari2 = diameter/2;
+        double luas = Math.PI * Math.pow(jari2, 2);
+        double volume = luas*tinggi;
+        return volume;
+    }
+    public double volumeKerucut(int diameter, int tinggi){
+        int jari2 = diameter/2;
+        double luas = Math.PI * Math.pow(jari2, 2);
+        double volume = luas*tinggi/3;
+        return volume;
+    }
+    public double volumeBola(int diameter){
+        int jari2 = diameter/2;
+        double volume = Math.PI * Math.pow(jari2, 3)*4/3;
+        return volume;
+    }
+    public static void main(String[] args) {
+        metodx mt = new metodx();
+        mt.hitungLuasLingkaran(21);
+        System.out.println(mt.luasLingkaran(28));
+        System.out.println("Volume tabung dengan diameter 70 dan tinggi 100 = " + mt.volumeTabung(70, 100));
+        System.out.println("Volume kerucut dengan diameter 70 dan tinggi 100 = " + mt.volumeKerucut(70, 100));
+        System.out.println("Volume bola dengan diameter 49 = " + mt.volumeBola(49));
+        System.exit(0);
+    }
+}
