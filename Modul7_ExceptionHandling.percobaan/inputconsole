@@ -1,0 +1,19 @@
+package Modul7_ExceptionHandlingAndMethod.percobaan;
+import java.io.*;
+public class inputconsole {
+    public static String readString(){
+        BufferedReader abc = new BufferedReader(new InputStreamReader(System.in));
+        String s = "";
+        try {
+            s = abc.readLine();
+        } catch (Exception err) {
+            System.out.println(err);
+        }return s;
+    }
+    public static int readInt(){
+        return Integer.parseInt(readString());
+    }
+    public static double readDouble(){
+        return Double.parseDouble(readString());
+    }
+}
