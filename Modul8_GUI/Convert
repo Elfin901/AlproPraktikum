@@ -1,0 +1,64 @@
+package Modul8_GUI;
+
+public class Convert {
+
+    static double CelciustoKelvin(double c) {
+        double hasil = c + 273.0;
+        return hasil;
+    }
+
+    static double CelciustoFahrenheit(double c) {
+        double hasil = c * 9 / 5 + 32.0;
+        return hasil;
+    }
+
+    static double CelciustoReamur(double c) {
+        double hasil = c * 4 / 5;
+        return hasil;
+    }
+
+    static double ReamurtoCelcius(double r) {
+        double hasil = r * 5 / 4;
+        return hasil;
+    }
+
+    static double ReamurtoKelvin(double r) {
+        double hasil = r * 5 / 4 + 273.0;
+        return hasil;
+    }
+
+    static double ReamurtoFahrenheit(double r) {
+        double hasil = r * 9 / 4 + 32.0;
+        return hasil;
+    }
+
+    static double KelvintoCelcius(double k) {
+        double hasil = k - 273.0;
+        return hasil;
+    }
+
+    static double KelvintoReamur(double k) {
+        double hasil = (k - 273.0) * 4 / 5;
+        return hasil;
+    }
+
+    static double KelvintoFahrenheit(double k) {
+        double hasil = (k - 273.0) * 9 / 5 + 32.0;
+        return hasil;
+    }
+
+    static double FahrenheittoCelcius(double f) {
+        double hasil = (f - 32.0) * 5 / 9;
+        return hasil;
+    }
+
+    static double FahrenheittoReamur(double f) {
+        double hasil = (f - 32.0) * 4 / 9;
+        return hasil;
+    }
+
+    static double FahrenheittoKelvin(double f) {
+        double hasil = (f - 32.0) * 5 / 9 + 273.0;
+        return hasil;
+    }
+}
